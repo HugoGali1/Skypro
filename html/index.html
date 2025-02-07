@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skypro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="banner-dinamico">
+        <span class="banner-text">¡Bienvenidos a SkyPro! Descuento de un 10% en tu primer pedido.</span>
+
+    </div>
+    
+    <div class="menu">
+        <a href="index.html">
+            <img src="/img/LogoAzul.png" alt="Logo" class="banner-imagen">
+        </a>
+        <a href="teclados.html">Teclados</a>
+        <a href="ratones.html">Ratones</a>
+        <a href="auriculares.html">Auriculares</a>
+        <a href="accesorios.html">Accesorios</a>
+        <a href="about.html">About Us</a>
+        <a href="registro.html" class="login-button">Iniciar Sesión</a> 
+    </div>
+    
+    <div class="categorias">
+        <h2 class="titulo-categorias">Explora por Categoría</h2>
+        <div class="contenedor-categorias">
+            <a href="teclados.html" class="categoria">
+                <img src="/img/teclado.png" alt="Teclados" class="imagen-teclado">
+                <div class="overlay">
+                    <h3>Teclados</h3>
+                    <p>Descubre nuestra selección de teclados mecánicos y más.</p>
+                </div>
+            </a>
+            <a href="ratones.html" class="categoria">
+                <img src="/img/ratonHome.png" alt="Ratones" class="imagen-raton">
+                <div class="overlay">
+                    <h3>Ratones</h3>
+                    <p>Explora ratones ergonómicos y gaming de alta precisión.</p>
+                </div>
+            </a>
+            <a href="auriculares.html" class="categoria">
+                <img src="/img/cascos.png" alt="Auriculares" class="imagen-auriculares">
+                <div class="overlay">
+                    <h3>Auriculares</h3>
+                    <p>Encuentra auriculares con sonido envolvente y más.</p>
+                </div>
+            </a>
+
+            <a href="accesorios.html" class="categoria">
+                <img src="/img/grips.png" alt="Accesorios" class="imagen-accesorios">
+                <div class="overlay">
+                    <h3>Accesorios</h3>
+                    <p>Mejora tu setup con nuestros accesorios gaming.</p>
+                </div>
+        </div>
+
+        <div class="footer">
+            <p>Síguenos en:</p>
+            <a href="#"><img src="/img/ig.png" alt="Instagram"></a>
+            <a href="#"><img src="/img/fb.png" alt="Facebook"></a>
+            <a href="#"><img src="/img/wh.png" alt="Whatshapp"></a>
+            <p>&copy; Todos los derechos reservados. Skypro</p>
+        </div>
+    
+        <div class="cookies-banner" id="cookies-banner">
+            <p>
+                Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio. 
+                Al continuar navegando, aceptas nuestra <a href="cookies.html">política de cookies</a>.
+            </p>
+            <button id="accept-cookies">Aceptar</button>
+        </div>
+    </div>
+    <script>
+     
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+    
+        function getCookie(name) {
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookies = decodedCookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let c = cookies[i].trim();
+                if (c.indexOf(name + "=") === 0) {
+                    return c.substring(name.length + 1);
+                }
+            }
+            return "";
+        }
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const cookiesBanner = document.getElementById("cookies-banner");
+            const acceptCookiesButton = document.getElementById("accept-cookies");
+    
+
+            if (!getCookie("cookiesAccepted")) {
+                cookiesBanner.style.display = "block";
+            }
+
+            acceptCookiesButton.addEventListener("click", () => {
+                setCookie("cookiesAccepted", "true", 365);
+                cookiesBanner.style.display = "none";
+            });
+        });
+    </script>
+    
+</body>
+</html>
