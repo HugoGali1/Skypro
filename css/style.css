@@ -523,6 +523,24 @@ form input {
     margin-bottom: 10px;
 }
 
+.footer{
+    text-align: center;
+    background-color: skyblue; 
+    padding: 15px;
+    margin-top: 90px;
+    }
+    
+    .footer img{
+        border-radius: 20px;
+        height: 30px;
+        border: white;
+    }
+    
+    .footer p{
+        color: white;
+    }
+    
+    
 
 @media (max-width: 768px) {
     .contenido {
