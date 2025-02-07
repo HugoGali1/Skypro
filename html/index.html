@@ -8,24 +8,27 @@
 </head>
 <body>
     <div class="banner-dinamico">
-        <span class="banner-text">¡Bienvenidos a SkyPro! Descuentos especiales por tiempo limitado.</span>
+        <span class="banner-text">¡Bienvenidos a SkyPro! Descuento de un 10% en tu primer pedido.</span>
+
     </div>
     
     <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="index.html">Nuevos lanzamientos</a>
+        <a href="index.html">
+            <img src="/Skypro/img/LogoAzul.png" alt="Logo" class="banner-imagen">
+        </a>
         <a href="teclados.html">Teclados</a>
         <a href="ratones.html">Ratones</a>
-        <a href="#auriculares">Auriculares</a>
+        <a href="auriculares.html">Auriculares</a>
+        <a href="accesorios.html">Accesorios</a>
         <a href="about.html">About Us</a>
-        <a href="about.html">About Us</a>
+        <a href="registro.html" class="login-button">Iniciar Sesión</a> 
     </div>
     
     <div class="categorias">
         <h2 class="titulo-categorias">Explora por Categoría</h2>
         <div class="contenedor-categorias">
             <a href="teclados.html" class="categoria">
-                <img src="https://via.placeholder.com/200" alt="Teclados" class="imagen-categoria">
+                <img src="/Skypro/img/teclado.png" alt="Teclados" class="imagen-teclado">
                 <div class="overlay">
                     <h3>Teclados</h3>
                     <p>Descubre nuestra selección de teclados mecánicos y más.</p>
@@ -39,13 +42,22 @@
                 </div>
             </a>
             <a href="auriculares.html" class="categoria">
-                <img src="https://via.placeholder.com/200" alt="Auriculares" class="imagen-categoria">
+                <img src="/Skypro/img/cascos.png" alt="Auriculares" class="imagen-auriculares">
                 <div class="overlay">
                     <h3>Auriculares</h3>
                     <p>Encuentra auriculares con sonido envolvente y más.</p>
                 </div>
             </a>
+
+            <a href="accesorios.html" class="categoria">
+                <img src="/Skypro/img/grips.png" alt="Accesorios" class="imagen-accesorios">
+                <div class="overlay">
+                    <h3>Accesorios</h3>
+                    <p>Mejora tu setup con nuestros accesorios gaming.</p>
+                </div>
         </div>
+
+    
         <div class="cookies-banner" id="cookies-banner">
             <p>
                 Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio. 
@@ -54,11 +66,6 @@
             <button id="accept-cookies">Aceptar</button>
         </div>
     </div>
-    <script>
-        function cerrarBanner() {
-            document.querySelector('.banner-dinamico').style.display = 'none';
-        }
-    </script>
     <script>
      
         function setCookie(name, value, days) {
